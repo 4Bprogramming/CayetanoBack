@@ -1,7 +1,7 @@
-import { DataTypes } from 'sequelize';
+import { DataTypes, Model } from 'sequelize';
 import sequelize  from '../database/db.js';
-
-const Cliente = sequelize.define('Cliente', {
+class Cliente extends Model {}
+Cliente.init({
   dni: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -26,7 +26,8 @@ const Cliente = sequelize.define('Cliente', {
     allowNull: true,
   },
 }, {
-  tableName: 'CLIENTE',
+  sequelize,
+  modeName: "Cliente",
   timestamps: false,
 });
 

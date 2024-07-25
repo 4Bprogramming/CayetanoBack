@@ -1,6 +1,6 @@
 import { google } from 'googleapis';
 import stream from 'stream';
-import  Cliente  from '../models/Cliente'; // Importa el modelo Cliente
+import  Cliente  from '../models/Cliente.js'; // Importa el modelo Cliente
 
 const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, REFRESH_TOKEN } = process.env;
 
